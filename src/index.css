@@ -1,69 +1,54 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Poppins" sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  /* Primary color scheme */
+  --primary-color: #02333c; 
+  --primary-light: #34656d; 
+  --primary-dark: #01161e; 
+
+  /* Complementary color scheme */
+  --complementary-color: #8c3b31; /* Complementary color for contrast */
+  --complementary-light: #bf6e6b; /* Lighter shade of complementary color */
+  --complementary-dark: #62231c; /* Darker shade of complementary color */
+
+  /* Neutral color scheme for background and text */
+  --background-color: #f4f4f4; /* Light grey background */
+  --text-color: #ffffff; /* White text color for contrast with primary */
+
+  /* Accent colors */
+  --accent-color-1: #d9ae5f; /* Accent color for highlighting */
+  --accent-color-2: #679436; /* Another accent color for variation */
+
+  /* Borders and shadows */
+  --border-color: #b4b4b4; /* Border color that complements the primary */
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Standard box shadow */
+
+  /* Other useful variables */
+  --link-color: #8c3b31; /* Link color, complementary for visibility */
+  --link-hover-color: #bf6e6b; /* Hover state color for links */
+
+  /* Font sizes */
+  --font-size-base: 1rem; /* Base font size */
+  --font-size-lg: 1.25rem; /* Large font size */
+  --font-size-sm: 0.875rem; /* Small font size */
+
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 3rem;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+html {
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
 }
