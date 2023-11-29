@@ -47,3 +47,8 @@
   --spacing-lg: 1.5rem;
   --spacing-xl: 3rem;
 }
+
+html {
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+}
