@@ -1,6 +1,6 @@
 function Navbar({ currentPage, handlePageChange }) {
     return (
-      <ul>
+      <ul className="nav-links">
         <li>
           <a
             href="#about"
