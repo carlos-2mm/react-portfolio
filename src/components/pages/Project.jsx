@@ -2,7 +2,7 @@ import React from 'react';
 
 function Project({ title, image, link, repo }) {
   return (
-    <div className="details-container color-container">
+    <div className="details-container">
     <div className="project-container">
       <img
         src={image}
@@ -13,13 +13,13 @@ function Project({ title, image, link, repo }) {
     <h2 className="project-title">{title}</h2>
     <div className="btn-container">
       <button
-        className="btn btn-color-2 project-btn"
+        className="btn btn-color-1"
         onClick={() => window.open(repo)}
       >
         Github
       </button>
       <button
-        className="btn btn-color-2 project-btn"
+        className="btn btn-color-2"
         onClick={() => window.open(link)}
       >
         Live Demo
