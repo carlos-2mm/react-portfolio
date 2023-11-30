@@ -33,7 +33,7 @@ function Resume() {
         <h2>
             Resume
         </h2>
-        <a href="./public/Carlos-Macias-Resume.pdf" download="Carlos-Macias-Resume.pdf">Download Resume</a>
+        <a href="./public/docs/Resume.pdf" download="Carlos-Macias-Resume.pdf">Download Resume</a>
 
       </div>
     </section>
