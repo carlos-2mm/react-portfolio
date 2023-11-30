@@ -222,6 +222,8 @@ section {
 }
 
 .containers {
+  display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
   margin-bottom: 2rem;
   margin-top: 2rem;
