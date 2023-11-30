@@ -3,7 +3,7 @@ import Navbar from './Navbar';
 
 function Header({ currentPage, handlePageChange }) {
   return (
-    <header id='desktop-nav'>
+    <header className='desktop-nav'>
       <div className='logo'>Carlos Macias</div>
       <Navbar currentPage={currentPage} handlePageChange={handlePageChange} />
     </header>

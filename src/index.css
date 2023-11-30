@@ -74,20 +74,14 @@ a,
 /* header section */
 
 header {
-  position: sticky;
-  top: 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 17vh;
 }
 
-header, nav,
 .nav-links {
   display: flex;
-}
-
-.nav-links {
   gap: 2rem;
   list-style: none;
   font-size: 1.5rem;
@@ -393,13 +387,12 @@ footer p {
   text-align: center;
 }
 
-nav {
-  justify-content: space-around;
-  align-items: center;
-  height: 17vh;
-}
-
 .footer-links {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
   font-size: 2.5rem;
 }
 
