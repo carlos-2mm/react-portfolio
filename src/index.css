@@ -137,6 +137,42 @@ section {
   margin-bottom: 1rem;
 }
 
+/* about me section */
+#about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.pic-container {
+  display: flex;
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+.about-pic {
+  border-radius: 2rem;
+}
+
+.about-txt {
+  flex: 1;
+  padding: 10px;
+  align-self: center;
+  text-align: center;
+}
+
+.subtitle,
+.title {
+  margin: 0;
+  padding: 5px 0;
+}
+
+.txt-content {
+  text-align: justify;
+}
+
 /* buttons */
 
 .btn-container {
