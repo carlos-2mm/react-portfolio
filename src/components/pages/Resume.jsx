@@ -3,28 +3,28 @@ import React from 'react';
 function Resume() {
   return (
     <section id="resume">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Proficiencies</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <h3>HTML</h3>
-              <h3>CSS</h3>
-              <h3>JavaScript</h3>
-              <h3>React</h3>
-              <h3>Bootstrap</h3>
+      <p className="subtitle">Explore My</p>
+      <h1 className="title">Proficiencies</h1>
+      <div className="experience-details-container">
+        <div className="about-containers">
+          <div className="details-container">
+            <h2 className="experience-subtitle">Frontend Development</h2>
+            <div className="development-container">
+              <h3 className='devs'>HTML</h3>
+              <h3 className='devs'>CSS</h3>
+              <h3 className='devs'>JavaScript</h3>
+              <h3 className='devs'>React</h3>
+              <h3 className='devs'>Bootstrap</h3>
             </div>
           </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Backend Development</h2>
-            <div class="article-container">
-              <h3>MySQL</h3>
-              <h3>Node JS</h3>
-              <h3>Express JS</h3>
-              <h3>MongoDB</h3>
-              <h3>Webpack</h3>
+          <div className="details-container">
+            <h2 className="experience-subtitle">Backend Development</h2>
+            <div className="development-container">
+              <h3 className='devs'>MySQL</h3>
+              <h3 className='devs'>Node JS</h3>
+              <h3 className='devs'>Express JS</h3>
+              <h3 className='devs'>MongoDB</h3>
+              <h3 className='devs'>Webpack</h3>
             </div>
           </div>
         </div>

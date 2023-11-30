@@ -5,8 +5,8 @@ function Footer() {
   return (
     <footer>
       <nav>
-          <div class="nav-links-container">
-            <ul class="nav-links footer-links">
+          <div className="nav-links-container">
+            <ul className="nav-links footer-links">
               <li><a href="https://github.com/carlos-2mm"><BsGithub /></a></li>
               <li><a href="https://linkedin.com/in/carlos-macias-m"><BsLinkedin /></a></li>
               <li><a href="https://twitter.com/carlos_imm"><BsTwitterX /></a></li>
