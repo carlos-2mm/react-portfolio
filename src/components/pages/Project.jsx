@@ -2,12 +2,30 @@ import React from 'react';
 
 function Project({ title, image, link, repo }) {
   return (
-    <div className="project">
-      <h3>{title}</h3>
-      <img src={image} alt={title} />
-      <a href={link}>View App</a>
-      <a href={repo}>GitHub Repo</a>
+    <div className="details-container color-container">
+    <div className="project-container">
+      <img
+        src={image}
+        alt={title}
+        className="project-img"
+      />
     </div>
+    <h2 className="project-title">{title}</h2>
+    <div className="btn-container">
+      <button
+        className="btn btn-color-2 project-btn"
+        onClick={() => window.open(repo)}
+      >
+        Github
+      </button>
+      <button
+        className="btn btn-color-2 project-btn"
+        onClick={() => window.open(link)}
+      >
+        Live Demo
+      </button>
+    </div>
+  </div>
   );
 }
 

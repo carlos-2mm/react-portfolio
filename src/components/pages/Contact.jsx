@@ -40,38 +40,44 @@ function Contact() {
 
   return (
     <section id="contact">
-      <h1>Contact Me</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
+      <p className="subtitle">Get in Touch</p>
+      <h1 className="title">Contact Me</h1>
+      <div className="contact-section">
+      <form onSubmit={handleSubmit} className="contact-form">
+        <div className="form-group">
           <label htmlFor="name">Name:</label>
           <input
             type="text"
             name="name"
             defaultValue={name}
             onBlur={handleChange}
+            className="form-control"
           />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="email">Email:</label>
           <input
             type="email"
             name="email"
             defaultValue={email}
             onBlur={handleChange}
+            className="form-control"
           />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="message">Message:</label>
           <textarea
             name="message"
             rows="5"
             defaultValue={message}
             onBlur={handleChange}
+            className="form-control"
           ></textarea>
         </div>
         {errorMessage && <div className="error-message">{errorMessage}</div>}
-        <button type="submit">Send</button>
+        <button className="btn btn-color-1" type="submit">Send</button>
       </form>
+      </div>
     </section>
   );
 }
