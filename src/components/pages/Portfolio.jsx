@@ -4,6 +4,12 @@ import Project from "./Project";
 function Portfolio() {
   const projects = [
     {
+      title: "The CodeX",
+      image: "/The-Codex.png",
+      link: "https://the-codex.onrender.com/",
+      repo: "https://github.com/theApostols/the-codex",
+    },
+    {
       title: "TravIs",
       image: "/travis_app.png",
       link: "https://travis231017-9762a24c277b.herokuapp.com/",
