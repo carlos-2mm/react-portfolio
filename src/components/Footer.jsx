@@ -21,7 +21,7 @@ function Footer() {
           </a>
         </li>
       </ul>
-      <p>Copyright &#169; 2023 Carlos Macias. All Rights Reserved.</p>
+      <p>Copyright © {new Date().getFullYear()} Carlos Macias. All Rights Reserved.</p>
     </footer>
   );
 }
