@@ -9,7 +9,7 @@
   -webkit-text-size-adjust: 100%;
 
   /* Primary color scheme */
-  --primary-color: #02333c; 
+  --primary-color: #0B4F6C; 
   --primary-light: #34656d; 
   --primary-dark: #01161e; 
 
@@ -82,7 +82,7 @@ header {
   justify-content: space-between;
   align-items: center;
   height: 10vh;
-  padding: 2.5rem 5rem;
+  padding: 2rem 5rem;
 }
 
 .nav-links {
@@ -106,6 +106,22 @@ a:hover {
 .logo-txt {
   font-size: 2rem;
   cursor: default;
+}
+
+.logo-img {
+  width: 5rem;
+  height: 5rem;
+  cursor: pointer;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: .1rem;
+}
+
+.logo-subtxt {
+  color: var(--primary-light);
 }
 
 /* sections */
