@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Logo_1" data-name="Logo 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #4a8295;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #0b4f6c;
+      }
+
+      .cls-3 {
+        fill: #9ccfcf;
+      }
+    </style>
+  </defs>
+  <g id="Graphic_Elements" data-name="Graphic Elements">
+    <path class="cls-2" d="M780.05,1245.75c216,0,391.11-175.1,391.11-391.11h-391.11v391.11Z"/>
+    <path class="cls-1" d="M388.94,854.64c0,216,175.1,391.11,391.11,391.11V463.54c-216,0-391.11,175.1-391.11,391.11Z"/>
+    <path class="cls-2" d="M780.05,463.54v419.79h392.26c14.7,202.59,183.6,362.42,389.95,362.42V463.54h-782.21Z"/>
+    <path class="cls-3" d="M1171.15,854.64c0-216-175.1-391.11-391.11-391.11v391.11h391.11Z"/>
+  </g>
+</svg>
