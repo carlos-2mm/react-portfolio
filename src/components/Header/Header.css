@@ -1,0 +1,34 @@
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+header .desktop-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 1rem 5rem;
+}
+
+.logo-txt {
+  font-size: 1.5rem;
+  cursor: default;
+}
+
+.logo-img {
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.1rem;
+}
+
+.logo-subtxt {
+  color: var(--accent-100);
+}

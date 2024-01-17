@@ -1,4 +1,5 @@
 :root {
+  font-family: Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -6,122 +7,47 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-
-  /* Primary color scheme */
-  --primary-color: #0B4F6C; 
-  --primary-light: #34656d; 
-  --primary-dark: #01161e; 
-
-  /* Complementary color scheme */
-  --complementary-color: #8c3b31; /* Complementary color for contrast */
-  --complementary-light: #bf6e6b; /* Lighter shade of complementary color */
-  --complementary-dark: #62231c; /* Darker shade of complementary color */
-
-  /* Neutral color scheme for background and text */
-  --background-color: #f4f4f4; /* Light grey background */
-  --text-color: #ffffff; /* White text color for contrast with primary */
-
-  /* Accent colors */
-  --accent-color-1: #d9ae5f; /* Accent color for highlighting */
-  --accent-color-2: #679436; /* Another accent color for variation */
-
-  /* Borders and shadows */
-  --border-color: #b4b4b4; /* Border color that complements the primary */
-  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Standard box shadow */
-
-  /* Other useful variables */
-  --link-color: #8c3b31; /* Link color, complementary for visibility */
-  --link-hover-color: #bf6e6b; /* Hover state color for links */
-
-  /* Font sizes */
-  --font-size-base: 1rem; /* Base font size */
-  --font-size-lg: 1.25rem; /* Large font size */
-  --font-size-sm: 0.875rem; /* Small font size */
-
-  /* Spacing */
-  --spacing-xs: 0.25rem;
-  --spacing-sm: 0.5rem;
-  --spacing-md: 1rem;
-  --spacing-lg: 1.5rem;
-  --spacing-xl: 3rem;
-}
-
-/* general */
-* {
-  margin: 0;
-  padding: 0;
 }
 
 body {
+  --primary-100:#007EA7;
+  --primary-200:#53add9;
+  --primary-300:#bfffff;
+  --accent-100:#00A8E8;
+  --accent-200:#004d85;
+  --text-100:#FFFFFF;
+  --text-200:#e0e0e0;
+  --bg-100:#002633;
+  --bg-200:#133543;
+  --bg-300:#2e4e5d;
+    
   margin: 0;
   padding: 0;
+  background-color: var(--bg-100);
+  color: var(--text-100);
+}
+
+/* general */
+
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  overflow-y: scroll;
 }
 
-p {
-  color: var(--primary-light);
+body {
+  background-color: var(--bg-100);
+  color: var(--text-100);
 }
 
-.content {
-  height: 100%;
-}
-
-/* transitions */
-
-a,
-.btn {
-  transition: all 300ms ease;
-}
-
-/* header section */
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 10vh;
-  padding: 2rem 5rem;
-}
-
-.nav-links {
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-  font-size: 1rem;
-}
-
-a {
-  color: var(--link-color);
-  text-decoration: none;
-}
-
-a:hover {
-  color: var(--primary-light);
-  text-decoration: underline;
-  text-underline-offset: .5rem;
-}
-
-.logo-txt {
-  font-size: 2rem;
-  cursor: default;
-}
-
-.logo-img {
-  width: 5rem;
-  height: 5rem;
-  cursor: pointer;
-}
-
-.logo-container {
-  display: flex;
-  align-items: center;
-  gap: .1rem;
-}
-
-.logo-subtxt {
-  color: var(--primary-light);
+section .main-content {
+  height: 100vh;
 }
 
 /* sections */
