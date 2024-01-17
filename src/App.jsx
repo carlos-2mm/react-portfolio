@@ -1,17 +1,17 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { Outlet } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
-    <div>
+    <>
       <Header />
-      <div className="main-container">
+      <section className='main-container'>
       <Outlet />
-      </div>
+      </section>
       <Footer />
-    </div>
+    </>
   );
 }
 
