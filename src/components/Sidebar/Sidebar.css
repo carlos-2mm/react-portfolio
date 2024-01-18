@@ -6,6 +6,7 @@
     align-items: center;
     background-color: var(--primary-100);
     color: var(--text-100);
+    z-index: 2;
 }
 
 /* Background styling for the sidebar with visual effects */
@@ -50,8 +51,8 @@ button {
 /* Styles for the links, including smooth transition */
 .links a {
     font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--primary-200);
+    font-weight: 300;
+    color: var(--text-100);
     text-decoration: none;
     transition: border 0.3s ease-in-out, padding 0.3s ease-in-out, color 0.3s ease-in-out;
 }
