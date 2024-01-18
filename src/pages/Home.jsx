@@ -1,43 +1,44 @@
-import React from 'react';
+import React from "react";
+// import "./Home.css";
+import { FaAngleRight } from "react-icons/fa";
 
-function Resume() {
+
+function Home() {
   return (
-    <section id="resume">
-      <p className="subtitle">Explore My</p>
-      <h1 className="title">Proficiencies</h1>
-      <div className="experience-details-container">
-        <div className="about-containers">
-          <div className="details-container">
-            <h2 className="experience-subtitle">Frontend Development</h2>
-            <div className="development-container">
-              <h3 className='devs'>HTML</h3>
-              <h3 className='devs'>CSS</h3>
-              <h3 className='devs'>JavaScript</h3>
-              <h3 className='devs'>React</h3>
-              <h3 className='devs'>Bootstrap</h3>
-            </div>
-          </div>
-          <div className="details-container">
-            <h2 className="experience-subtitle">Backend Development</h2>
-            <div className="development-container">
-              <h3 className='devs'>MySQL</h3>
-              <h3 className='devs'>Node JS</h3>
-              <h3 className='devs'>Express JS</h3>
-              <h3 className='devs'>MongoDB</h3>
-              <h3 className='devs'>Webpack</h3>
-            </div>
-          </div>
+    <div id="home" className="home">
+      {/* Profile Card Starts */}
+      <div className="profile-card">
+        {/* Section Title Starts */}
+        <div className="section-title">
+          <h1 className="title-txt">I'm Carlos Macias</h1>
+          <h2 className="subtitle-txt">Full Stack Developer</h2>
+        </div>
+        {/* Section Title Ends */}
+        <p className="section-txt">
+          Passionate and detail-oriented Front End Developer with a strong
+          foundation in Full Stack development, gained from a comprehensive
+          bootcamp at the University of Toronto. Equipped with a background in
+          architecture, I bring a unique blend of design sensibility and
+          technical expertise, enhancing my ability to create aesthetically
+          pleasing and functionally robust web applications.
+        </p>
+        <div id="link-about" className="button">
+          <FaAngleRight className="button-icon" />
+          <span>about me</span>
         </div>
       </div>
-      <div>
-        <h2>
-            Resume
-        </h2>
-        <a href="./assets/docs/resume.pdf" download="Carlos-Macias-Resume.pdf">Download Resume</a>
-
+      {/* Profile Card Ends */}
+      {/* Image Container Starts */}
+      <div className="img-container">
+        <img
+          className="img-profile"
+          src="./public/profile.jpg"
+          alt="Profile Picture"
+        />
       </div>
-    </section>
+      {/* Image Container Ends */}
+    </div>
   );
 }
 
-export default Resume;
+export default Home;
