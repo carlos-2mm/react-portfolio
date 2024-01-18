@@ -1,9 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Sidebar from "../Sidebar/Sidebar";
 
 import { motion } from "framer-motion";
-
-import { FaHome, FaUser, FaImages, FaEnvelopeOpenText } from "react-icons/fa";
 
 import "./Header.css";
 
@@ -18,6 +17,7 @@ function Header() {
               Carlos <span className="logo-subtxt">Macias</span>
             </h2>
           </motion.div>
+          <Sidebar />
         </div>
       </header>
     </>
