@@ -51,8 +51,8 @@ const Links = () => {
           whileTap={{ scale: 0.95 }}
           className="link-item"
         >
-          <span className="icon">{item.icon}</span>
-          <span className="text">{item.name}</span>
+          <div className="icon">{item.icon}</div>
+          <div className="text">{item.name}</div>
         </motion.a>
       ))}
     </motion.div>

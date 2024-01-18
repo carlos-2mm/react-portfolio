@@ -1,3 +1,4 @@
+/* Main styles for the sidebar */
 .sidebar {
     display: flex;
     flex-direction: column;
@@ -7,6 +8,7 @@
     color: var(--text-100);
 }
 
+/* Background styling for the sidebar with visual effects */
 .sidebar .bg {
     position: fixed;
     top: 0;
@@ -15,11 +17,12 @@
     width: 400px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    background-color: rgba(255, 255, 255, 0.1); /* Ajusta la opacidad según necesidad */
-    backdrop-filter: blur(10px); /* Desenfoque para el efecto de vidrio */
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
 
+/* Styling for the button */
 button {
     width: 50px;
     height: 50px;
@@ -32,6 +35,7 @@ button {
     cursor: pointer;
 }
 
+/* Container for the links */
 .links {
     position: absolute;
     width: 100%;
@@ -43,14 +47,24 @@ button {
     gap: 2rem;
 }
 
+/* Styles for the links, including smooth transition */
 .links a {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 600;
-    color: var(--primary-100);
+    color: var(--primary-200);
     text-decoration: none;
-    transition: color 0.3s ease-in-out;
+    transition: border 0.3s ease-in-out, padding 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
+/* Styles for hover state of the links */
+.links a:hover {
+    color: var(--accent-100);
+    border: 2px solid var(--accent-100);
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+}
+
+/* Style for elements inside the links */
 .link-item {
     display: flex;
     align-items: center;
