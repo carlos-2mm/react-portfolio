@@ -1,11 +1,12 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 // import "./Home.css";
 import { FaAngleRight } from "react-icons/fa";
 
 
 function Home() {
   return (
-    <div id="home" className="home">
+    <section id="home" className="home">
       {/* Profile Card Starts */}
       <div className="profile-card">
         {/* Section Title Starts */}
@@ -23,8 +24,10 @@ function Home() {
           pleasing and functionally robust web applications.
         </p>
         <div id="link-about" className="button">
-          <FaAngleRight className="button-icon" />
-          <span>about me</span>
+          <Link to="/about">
+        <FaAngleRight className="button-icon" />
+        <span>about me</span>
+      </Link>
         </div>
       </div>
       {/* Profile Card Ends */}
@@ -37,7 +40,7 @@ function Home() {
         />
       </div>
       {/* Image Container Ends */}
-    </div>
+    </section>
   );
 }
 

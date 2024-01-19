@@ -49,7 +49,7 @@ html {
 
 a {
   text-decoration: none;
-  color: var(--primary-100);
+  color: var(--text-100);
 }
 
 /* sections */
