@@ -334,6 +334,146 @@ a {
 
 /* Contact section Ends */
 
+/* Portfolio section Starts */
+
+.portfolio {
+  margin: 50px auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.portfolio h1 {
+  color: var(--primary-100);
+  font-size: 4.5rem;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+}
+
+.portfolio ul {
+  margin: 10px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.portfolio .container {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.portfolio .container .item {
+  width: 280px;
+  height: 220px;
+  border-radius: 20px;
+  border: 1px solid var(--primary-200);
+  margin: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-100);
+  position: relative;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.portfolio .container .item h3 {
+  position: absolute;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.portfolio .container .item img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.portfolio .container .item:hover {
+  background-color: var(--primary-100);
+}
+
+.portfolio .container .item:hover img {
+  opacity: 0.2;
+  z-index: 0;
+}
+
+@media (max-width: 768px) {
+    .portfolio ul {
+        margin: 10px 0;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+  .portfolio .container {
+    width: 100%;
+  }
+
+  .portfolio .container .item {
+    width: 150px;
+    height: 120px;
+  }
+}
+
+/* Portfolio section Ends */
+
+/* Projects section Starts */
+
+.portfolioList {
+  font-size: 1.5rem;
+  margin-right: 50px;
+  padding: 7px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.portfolioList:hover {
+  color: var(--primary-200);
+}
+
+.portfolioList.active {
+  color: var(--primary-100);
+}
+
+@media (max-width: 768px) {
+  .portfolioList {
+    margin-right: 20px;
+    font-size: 1rem;
+  }
+}
+
+.portfolioList {
+  font-size: 1.5rem;
+  margin-right: 50px;
+  padding: 7px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.portfolioList:hover {
+  color: var(--primary-200);
+}
+
+.portfolioList.active {
+  color: var(--primary-100);
+}
+
+@media (max-width: 768px) {
+  .portfolioList {
+    margin-right: 20px;
+    font-size: 1rem;
+  }
+}
+
+/* Projects section Ends */
+
 /* Footer section */
 
 footer {

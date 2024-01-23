@@ -1,118 +1,69 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import Project from "./Project";
+// import "./Portfolio.css";
+import { frontEndProjects, backEndProjects, fullStackProjects } from "../utils/projects";
 
 function Portfolio() {
-  const projects = [
+
+  const [selected, setSelected] = useState("featured");
+  const [data, setData] = useState([]);
+  const list = [
     {
-      title: "The CodeX",
-      image: "/The-Codex.png",
-      link: "https://the-codex.onrender.com/",
-      repo: "https://github.com/theApostols/the-codex",
+      id: "frontEnd",
+      title: "Front End",
     },
     {
-      title: "TravIs",
-      image: "/travis_app.png",
-      link: "https://travis231017-9762a24c277b.herokuapp.com/",
-      repo: "https://github.com/UofTTeam2/TravIS",
+      id: "backEnd",
+      title: "Back End",
     },
     {
-      title: "Cine Search",
-      image: "/CineSearch.png",
-      link: "https://team-ccmy.github.io/Cine-Search/",
-      repo: "https://github.com/Team-ccmy/Cine-Search",
-    },
-    // {
-    //   title: "Text Editor",
-    //   image: "/J.A.T.E..png",
-    //   link: "https://jate-txt-edit-4d9b48ee6fe7.herokuapp.com/",
-    //   repo: "https://github.com/carlos-2mm/text-editor",
-    // },
-    // {
-    //   title: "Social Network API",
-    //   image: "/Social-Network-API.png",
-    //   link: "project_link",
-    //   repo: "https://github.com/carlos-2mm/social-network-API",
-    // },
-    // {
-    //   title: "E-Commerce Backend",
-    //   image: "/e-commerce.png",
-    //   link: "project_link",
-    //   repo: "https://github.com/carlos-2mm/e-commerce-backend",
-    // },
-    // {
-    //   title: "Employee Tracker",
-    //   image: "/Employee-Tracker.png",
-    //   link: "project_link",
-    //   repo: "https://github.com/carlos-2mm/employee-tracker",
-    // },
-    // {
-    //   title: "Note Taker",
-    //   image: "/landing_page.png",
-    //   link: "project_link",
-    //   repo: "https://github.com/carlos-2mm/note-taker",
-    // },
-    // {
-    //   title: "SVG Logo Maker",
-    //   image: "/SVG-Logo-Maker.png",
-    //   link: "project_link",
-    //   repo: "https://github.com/carlos-2mm/svg-logo-maker",
-    // },
-    // {
-    //   title: "README Generator",
-    //   image: "/README-Generator.png",
-    //   link: "project_link",
-    //   repo: "https://github.com/carlos-2mm/readme-generator",
-    // },
-    {
-      title: "Weather Dashboard",
-      image: "/Weather-Dashboard.png",
-      link: "https://carlos-2mm.github.io/weather-forecast-app/",
-      repo: "https://github.com/carlos-2mm/weather-forecast-app",
-    },
-    {
-      title: "Daily Agenda Assistant",
-      image: "/Daily-Agenda-Assistant.png",
-      link: "https://carlos-2mm.github.io/daily-agenda-assistant/",
-      repo: "https://github.com/carlos-2mm/daily-agenda-assistant",
-    },
-    {
-      title: "JavaScript Quiz",
-      image: "/JavaScript-Quiz.png",
-      link: "https://carlos-2mm.github.io/js-fundamentals-quiz/",
-      repo: "https://github.com/carlos-2mm/js-fundamentals-quiz",
-    },
-    {
-      title: "Password Generator",
-      image: "/Password-Generator.png",
-      link: "https://carlos-2mm.github.io/safe-password-creator/",
-      repo: "https://github.com/carlos-2mm/safe-password-creator",
-    },
-    {
-      title: "Personal Portfolio",
-      image: "/Portfolio.png",
-      link: "project_link",
-      repo: "github_repo_link",
-    },
-    {
-      title: "Horiseon",
-      image: "/Horiseon.png",
-      link: "https://carlos-2mm.github.io/horiseon-online-specialist/t_link",
-      repo: "https://github.com/carlos-2mm/horiseon-online-specialist",
+      id: "fullStack",
+      title: "Full Stack",
     },
   ];
 
+  useEffect(() => {
+    switch (selected) {
+      case "frontEnd":
+        setData(frontEndProjects);
+        break;
+      case "backEnd":
+        setData(backEndProjects);
+        break;
+      case "fullStack":
+        setData(fullStackProjects);
+        break;
+      default:
+        setData(frontEndProjects);
+    }
+  }, [selected]);
+
   return (
-    <section id="projects">
-      <p className="subtitle">Browse My Recent</p>
-      <h1 className="title">Projects</h1>
-      <div className="projects-container">
-        <div className="containers">
-          {projects.map((project, index) => (
-          <Project key={index} {...project} />
-          ))}
-        </div>
+    <div className="portfolio" id="portfolio">
+      <h1>Portfolio</h1>
+      <ul>
+        {list.map((item) => (
+          <Project
+          key={item.id}
+            title={item.title}
+            active={selected === item.id}
+            setSelected={setSelected}
+            id={item.id}
+          />
+        ))}
+      </ul>
+      <div className="container">
+        {data.map((d) => (
+          <div className="item" key={d.id}>
+            <img
+              src={d.image}
+              alt=""
+            />
+            <h3>{d.title}</h3>
+          </div>
+        ))}
       </div>
-    </section>
+    </div>
   );
 }
 
