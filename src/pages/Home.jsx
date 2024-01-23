@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from 'react-router-dom';
 // import "./Home.css";
 import { FaAngleRight } from "react-icons/fa";
+import profilePic from '../../public/profile.jpg';
 
 
 function Home() {
@@ -25,9 +26,9 @@ function Home() {
         </p>
         <div id="link-about" className="button">
           <Link to="/about">
-        <FaAngleRight className="button-icon" />
-        <span>about me</span>
-      </Link>
+            <FaAngleRight className="button-icon" />
+            <span>about me</span>
+          </Link>
         </div>
       </div>
       {/* Profile Card Ends */}
@@ -35,7 +36,7 @@ function Home() {
       <div className="img-container">
         <img
           className="img-profile"
-          src="./public/profile.jpg"
+          src={profilePic}
           alt="Profile Picture"
         />
       </div>
@@ -43,5 +44,6 @@ function Home() {
     </section>
   );
 }
+
 
 export default Home;
