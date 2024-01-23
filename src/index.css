@@ -427,30 +427,7 @@ a {
 /* Projects section Starts */
 
 .portfolioList {
-  font-size: 1.5rem;
-  margin-right: 50px;
-  padding: 7px;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-.portfolioList:hover {
-  color: var(--primary-200);
-}
-
-.portfolioList.active {
-  color: var(--primary-100);
-}
-
-@media (max-width: 768px) {
-  .portfolioList {
-    margin-right: 20px;
-    font-size: 1rem;
-  }
-}
-
-.portfolioList {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-right: 50px;
   padding: 7px;
   border-radius: 10px;
