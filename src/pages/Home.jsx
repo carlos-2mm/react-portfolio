@@ -1,15 +1,29 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-// import "./Home.css";
 import { FaAngleRight } from "react-icons/fa";
 import profilePic from '../../public/profile.jpg';
-
+import { motion } from 'framer-motion';
 
 function Home() {
+  const containerVariants = {
+    hidden: { opacity: 0, x: -100 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.5 } }
+  };
+
+  const imgVariants = {
+    hidden: { scale: 0 },
+    visible: { scale: 1, transition: { delay: 0.3, duration: 0.5 } }
+  };
+
   return (
-    <section id="home" className="home">
+    <motion.section 
+      id="home" 
+      className="home"
+      initial="hidden"
+      animate="visible"
+    >
       {/* Profile Card Starts */}
-      <div className="profile-card">
+      <motion.div className="profile-card" variants={containerVariants}>
         {/* Section Title Starts */}
         <div className="section-title">
           <h1 className="title-txt">I'm Carlos Macias</h1>
@@ -27,23 +41,22 @@ function Home() {
         <div id="link-about" className="button">
           <Link to="/about">
             <FaAngleRight className="button-icon" />
-            <span>about me</span>
+            <span>About Me</span>
           </Link>
         </div>
-      </div>
+      </motion.div>
       {/* Profile Card Ends */}
       {/* Image Container Starts */}
-      <div className="img-container">
+      <motion.div className="img-container" variants={imgVariants}>
         <img
           className="img-profile"
           src={profilePic}
           alt="Profile Picture"
         />
-      </div>
+      </motion.div>
       {/* Image Container Ends */}
-    </section>
+    </motion.section>
   );
 }
-
 
 export default Home;
