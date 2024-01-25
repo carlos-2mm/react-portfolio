@@ -94,8 +94,8 @@ a {
   background-color: transparent;
   border: 1px solid var(--primary-100);
   border-radius: 2rem;
-  color: var(--text-100);
-  text-transform: uppercase;
+  color: var(--text-200);
+  font-size: 1.2rem;
   padding: 10px 50px;
   cursor: pointer;
   display: inline-block;
@@ -249,8 +249,8 @@ a {
   background-color: transparent;
   border: 1px solid var(--primary-100);
   border-radius: 2rem;
-  color: var(--text-100);
-  text-transform: uppercase;
+  color: var(--text-200);
+  font-size: 1.2rem;
   padding: 10px 50px;
   cursor: pointer;
   display: inline-block;
@@ -273,8 +273,8 @@ a {
   color: var(--text-100);
 }
 
-.icon{
-    color: var(--primary-100);
+.icon {
+  color: var(--primary-100);
 }
 
 .error-message {
@@ -342,14 +342,14 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
+  gap: 20px;
 }
 
 .portfolio h1 {
-  color: var(--primary-100);
+  text-align: center;
+  color: var(--text-100);
   font-size: 4.5rem;
   font-weight: 300;
-  margin-bottom: 0.5rem;
 }
 
 .portfolio ul {
@@ -359,8 +359,24 @@ a {
   display: flex;
 }
 
+.portfolio h2 {
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--text-100);
+  text-align: center;
+}
+
+.portfolio .deskSVG {
+  margin-top: 2rem;
+  stroke: var(--accent-100);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
 .portfolio .container {
-  width: 70%;
+  width: 90%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -368,11 +384,10 @@ a {
 }
 
 .portfolio .container .item {
-  width: 280px;
-  height: 220px;
+  width: 45%;
+  margin: 10px;
+  height: 380px;
   border-radius: 20px;
-  border: 1px solid var(--primary-200);
-  margin: 10px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -406,11 +421,11 @@ a {
 }
 
 @media (max-width: 768px) {
-    .portfolio ul {
-        margin: 10px 0;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
+  .portfolio ul {
+    margin: 10px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
   .portfolio .container {
     width: 100%;
@@ -428,24 +443,33 @@ a {
 
 .portfolioList {
   font-size: 1.2rem;
+  color: var(--text-200);
   margin-right: 50px;
-  padding: 7px;
-  border-radius: 10px;
+  padding: 10px 50px;
+  border-radius: 2rem;
+  border: 1px solid var(--accent-100);
+  background-color: transparent;
   cursor: pointer;
 }
 
 .portfolioList:hover {
-  color: var(--primary-200);
+  background-color: var(--primary-100);
+  color: var(--text-100);
+  /* text-decoration: underline; */
 }
 
 .portfolioList.active {
   color: var(--primary-100);
+  background-color: transparent;
+  /* text-decoration: underline; */
+  padding-bottom: 1px;
 }
 
 @media (max-width: 768px) {
   .portfolioList {
     margin-right: 20px;
     font-size: 1rem;
+    margin-bottom: 20px;
   }
 }
 
