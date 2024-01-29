@@ -11,6 +11,7 @@ import {
 import { BiLogoJquery, BiLogoMongodb } from "react-icons/bi";
 import { SiMysql } from "react-icons/si";
 import { FaBriefcase, FaUniversity } from 'react-icons/fa';
+import resume from "../assets/docs/resume.pdf";
 
 const About = () => {
   return (
@@ -28,9 +29,9 @@ const About = () => {
         <p>Based on: <span>Toronto</span></p>
         <p>Phone: <span>+1 (437) 425-7157</span></p>
         <p>Languages: <span>English, Spanish</span></p>
-        <div>
+        <a href={resume} download="Carlos_Macias_Resume">
         <button className="download-button">Download Resume</button>
-        </div>
+        </a>
       </div>
 
       <div className="skills-section">
