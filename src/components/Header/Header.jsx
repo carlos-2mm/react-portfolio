@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Sidebar from "../Sidebar/Sidebar";
+import Sidebar from "../Sidebar";
 
 import { motion } from "framer-motion";
 
