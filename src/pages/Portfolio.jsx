@@ -189,15 +189,18 @@ function Portfolio() {
           className="container"
         >
           {data.map((d) => (
-            <motion.div
+            <motion.a
               className="item"
               key={d.id}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
+              href={d.link}
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <img src={d.image} alt="" />
+              <img src={d.image} alt={d.title} />
               <h3>{d.title}</h3>
-            </motion.div>
+            </motion.a>
           ))}
         </motion.div>
       </AnimatePresence>
