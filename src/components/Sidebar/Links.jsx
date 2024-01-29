@@ -33,7 +33,7 @@ const itemVariants = {
   },
 };
 
-const Links = () => {
+const Links = ({ setIsOpen }) => {
   const items = [
     { name: "Home", icon: <FaHome />, href: "/" },
     { name: "About", icon: <FaUser />, href: "/about" },
@@ -41,11 +41,15 @@ const Links = () => {
     { name: "Contact", icon: <FaEnvelopeOpenText />, href: "/contact" },
   ];
 
+  const handleClick = () => {
+    setIsOpen(false);
+  };
+
   return (
     <motion.div className="links" variants={variants}>
       {items.map((item) => (
-        <motion.div className="link" variants={itemVariants} key={item.name}>
-          <NavLink to={item.href} exact activeClassName="active">
+        <motion.div className="link" variants={itemVariants} key={item.name} whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
+          <NavLink to={item.href} exact activeClassName="active" onClick={handleClick}>
             {item.name}
           </NavLink>
         </motion.div>
