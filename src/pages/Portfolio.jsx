@@ -53,9 +53,15 @@ const containerVariants = {
 };
 
 function Portfolio() {
-  const [selected, setSelected] = useState("");
+  const [selectedTab, setSelectedTab] = useState("");
   const [data, setData] = useState([]);
   const [showMessage, setShowMessage] = useState(true);
+
+  const tabs = [
+    { id: "frontEnd", title: "Deployed Projects" },
+    { id: "backEnd", title: "Non-Deployed Projects" },
+    { id: "fullStack", title: "Group Projects" },
+  ];
 
   const ref = useRef();
   const isInView = useInView(ref, { margin: "-100px" });
@@ -76,11 +82,11 @@ function Portfolio() {
   ];
 
   useEffect(() => {
-    if (selected !== "") {
+    if (selectedTab !== "") {
       setShowMessage(false);
     }
 
-    switch (selected) {
+    switch (selectedTab) {
       case "frontEnd":
         setData(frontEndProjects);
         break;
@@ -93,7 +99,7 @@ function Portfolio() {
       default:
         setData([]);
     }
-  }, [selected]);
+  }, [selectedTab]);
 
   return (
     <motion.div
@@ -105,24 +111,24 @@ function Portfolio() {
       whileInView="animate"
     >
       <h1>Portfolio</h1>
-      <motion.div
-        className="textContainer"
-        variants={textVariants}
-        initial="initial"
-        animate="animate"
-      >
-        <motion.ul variants={textVariants} initial="initial" animate="animate">
-          {list.map((item) => (
-            <Project
-              key={item.id}
-              title={item.title}
-              active={selected === item.id}
-              setSelected={setSelected}
-              id={item.id}
-            />
-          ))}
-        </motion.ul>
-      </motion.div>
+      <div className="tabs">
+  {tabs.map((tab, index) => (
+    <div 
+      key={tab.id} 
+      className={`tab ${selectedTab === tab.id ? 'active' : ''}`}
+      onClick={() => setSelectedTab(tab.id)}
+      style={{ position: 'relative' }}
+    >
+      {selectedTab === tab.id && (
+        <motion.div 
+          className="tab-background" 
+          layoutId="tab-background"
+        />
+      )}
+      {tab.title}
+    </div>
+  ))}
+</div>
       <AnimatePresence>
         {showMessage && (
           <motion.div
@@ -174,7 +180,7 @@ function Portfolio() {
       </AnimatePresence>
       <AnimatePresence>
         <motion.div
-          key={selected}
+          key={selectedTab}
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -183,10 +189,15 @@ function Portfolio() {
           className="container"
         >
           {data.map((d) => (
-            <div className="item" key={d.id}>
+            <motion.div
+              className="item"
+              key={d.id}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
               <img src={d.image} alt="" />
               <h3>{d.title}</h3>
-            </div>
+            </motion.div>
           ))}
         </motion.div>
       </AnimatePresence>

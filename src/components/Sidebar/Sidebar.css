@@ -1,73 +1,69 @@
 /* Main styles for the sidebar */
 .sidebar {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--primary-100);
-    color: var(--text-100);
-    z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-100);
+  color: var(--text-100);
+  z-index: 2;
 }
 
 /* Background styling for the sidebar with visual effects */
 .sidebar .bg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 400px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 400px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 /* Styling for the button */
 #toggle-btn {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    position: fixed;
-    top: 25px;
-    left: 25px;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: fixed;
+  top: 25px;
+  left: 25px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 /* Container for the links */
 .links {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
 }
 
 /* Styles for the links, including smooth transition */
 .links a {
-    font-size: 1.2rem;
-    font-weight: 300;
-    color: var(--text-200);
-    text-decoration: none;
-    padding: 10px 50px;
-  border-radius: 2rem;
-  border: 1px solid var(--accent-100);
-  background-color: transparent;
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: var(--text-200);
+  text-decoration: none;
 }
 
 /* Styles for hover state of the links */
 .links a:hover {
-    color: var(--text-100);
+  color: var(--text-100);
 }
 
 /* Style for elements inside the links */
 .link-item {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
