@@ -184,6 +184,216 @@ a {
 
 /* Home Section Ends */
 
+/* About section Starts */
+
+
+.about-container {
+  margin: 50px auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.about-header h1 {
+  text-align: center;
+  color: var(--primary-100);
+  font-size: 4.5rem;
+  font-weight: 300;
+}
+
+.personal-info-section .subtitle-txt {
+  color: var(--text-100);
+  font-size: 2rem;
+  font-weight: 300;
+  text-align: start;
+  margin-bottom: 20px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.personal-info-section,
+.skills-section {
+  margin-top: 20px;
+  margin-inline: 100px;
+  padding: 10px;
+  flex-basis: 48%;
+}
+
+.personal-info-section p {
+  color: var(--text-200);
+  margin-bottom: 10px;
+}
+
+.personal-info-section p span {
+  color: var(--text-100);
+  margin-left: 10px;
+  font-weight: 500;
+}
+
+.download-button {
+  background-color: transparent;
+  border: 1px solid var(--primary-100);
+  border-radius: 2rem;
+  color: var(--text-200);
+  font-size: 1.2rem;
+  padding: 10px 50px;
+  cursor: pointer;
+  display: inline-block;
+  background-image: linear-gradient(
+    to right,
+    var(--primary-100) 50%,
+    transparent 50%
+  );
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: background-position 0.5s ease-out;
+  overflow: hidden;
+  padding-left: 50px;
+  padding-right: 60px;
+  z-index: 1;
+  margin-top: 20px;
+}
+
+.download-button:hover {
+  background-position: left bottom;
+  color: var(--text-100);
+}
+
+.skills-section .subtitle-txt {
+  color: var(--text-100);
+  font-size: 2rem;
+  font-weight: 300;
+  text-align: start;
+  margin-bottom: 20px;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.skill-icon {
+  color: var(--accent-100);
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.section-divider {
+  width: 50%;
+  border: 0;
+  height: 1px;
+  background-color: var(--bg-200);
+  margin: 40px 0;
+}
+
+.experience-education-section {
+  display: flex;
+  justify-content: space-between;
+  margin:40px;
+}
+
+.experience,
+.education {
+  width: 45%;
+}
+
+.section-icon {
+  font-size: 2rem;
+  color: var(--accent-100);
+  margin-right: 20px;
+  vertical-align: middle;
+}
+
+.experience h2,
+.education h2 {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--text-100);
+  text-align: center;
+}
+
+.experience-item,
+.education-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.experience-details,
+.education-details {
+  flex-grow: 1;
+  padding: 0 25px;
+  border-left: 3px solid var(--primary-100);
+}
+
+.experience-dates,
+.education-dates {
+  color: var(--text-200);
+  font-weight: 300;
+}
+
+.experience h2,
+.education h2 {
+  color: var(--text-100);
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+.experience h3,
+.education h3 {
+  color: var(--accent-100);
+  margin-bottom: 10px;
+  font-weight: 300;
+}
+
+.experience p,
+.education p {
+  color: var(--text-100);
+  margin-bottom: 10px;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .personal-info-section,
+    .skills-section,
+    .experience,
+    .education {
+        margin-inline: 10px;
+        flex-basis: auto;
+        width: 100%;
+    }
+
+    .skills {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .experience-education-section {
+        flex-direction: column;
+    }
+}
+
+/* About section Ends */
+
 /* Contact section Starts */
 
 .contact {
