@@ -1,5 +1,6 @@
 import { FaHome, FaUser, FaImages, FaEnvelopeOpenText } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { NavLink } from "react-router-dom";
 
 const variants = {
   open: {
@@ -42,18 +43,12 @@ const Links = () => {
 
   return (
     <motion.div className="links" variants={variants}>
-      {items.map((item, index) => (
-        <motion.a
-          href={item.href}
-          key={index}
-          variants={itemVariants}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
-          className="link-item"
-        >
-          <div className="icon">{item.icon}</div>
-          <div className="text">{item.name}</div>
-        </motion.a>
+      {items.map((item) => (
+        <motion.div className="link" variants={itemVariants} key={item.name}>
+          <NavLink to={item.href} exact activeClassName="active">
+            {item.name}
+          </NavLink>
+        </motion.div>
       ))}
     </motion.div>
   );
