@@ -11,7 +11,7 @@ import {
 import { BiLogoJquery, BiLogoMongodb } from "react-icons/bi";
 import { SiMysql } from "react-icons/si";
 import { FaBriefcase, FaUniversity } from 'react-icons/fa';
-import resume from "../assets/docs/resume.pdf";
+import resume from "../assets/docs/Resume.pdf";
 
 const About = () => {
   return (
