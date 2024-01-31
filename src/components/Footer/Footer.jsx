@@ -11,7 +11,7 @@ function Footer() {
           </a>
         </li>
         <li>
-          <a href="https://linkedin.com/in/carlos-macias-m">
+          <a href="https://linkedin.com/in/carlos-2m">
             <BsLinkedin />
           </a>
         </li>
