@@ -43,6 +43,7 @@ const Contact = () => {
         (result) => {
           setSuccess(true);
           setError(false);
+          formRef.current.reset();
         },
         (error) => {
           setError(error.text);
